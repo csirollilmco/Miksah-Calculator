@@ -2,7 +2,7 @@
   "name": "tauri-app-template",
   "version": "0.1.0",
   "description": "A template for building desktop applications with Tauri",
-  "author": "Valmisson Grizorte <missongrizorte@gmail.com>",
+  "author": "Christian Sirolli <christian.sirolli@gmail.com>",
   "private": true,
   "license": "MIT",
   "workspaces": [
