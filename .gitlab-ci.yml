@@ -62,7 +62,7 @@ pages:
   stage: test
   script:
     - mkdir -p public
-    - cp packages/src-renderer/dist public
+    - cp -r packages/src-renderer/dist/* public
   artifacts:
     paths:
       - public
