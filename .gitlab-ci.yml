@@ -8,26 +8,33 @@
 # https://hub.docker.com/r/library/node/tags/
 image: node:latest
 
+before_script:
+  - apt update && apt install -y libwebkit2gtk-4.0-dev build-essential curl wget libssl-dev libgtk-3-dev libappindicator3-dev patchelf librsvg2-dev libappindicator patchelf librsvg
+  - npm install -g yarn
+  - curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+  - rustc --version
+  - yarn install
+  - yarn npm audit fix
+  - yarn tauri info
 # Pick zero or more services to be used on all builds.
 # Only needed when using a docker container to run your tests in.
 # Check out: http://docs.gitlab.com/ee/ci/docker/using_docker_images.html#what-is-a-service
-services:
-  - mysql:latest
-  - redis:latest
-  - postgres:latest
+# services:
+#   - mysql:latest
+#   - redis:latest
+#   - postgres:latest
 
 # This folder is cached between builds
 # https://docs.gitlab.com/ee/ci/yaml/index.html#cache
 cache:
   paths:
     - node_modules/
-
-test_async:
+build:
   script:
-    - npm install
-    - node ./specs/start.js ./specs/async.spec.js
-
-test_db:
-  script:
-    - npm install
-    - node ./specs/start.js ./specs/db-postgres.spec.js
+    - yarn build
+  artifacts:
+    untracked: false
+    expire_in: 30 days
+    public: true
+    paths:
+      - "*"

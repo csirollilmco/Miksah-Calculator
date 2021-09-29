@@ -24,12 +24,6 @@ Click the **[Use this template][generate]** button.
 - [Vite][vite] is used to group all the source code of the renderer.
 - Work easily with Vue, Svelte, React, etc.
 
-### Typescript (optional)
-- The Latest [TypeScript][typescript] is used for all source code.
-- **Vite** supports TypeScript out of the box. However, it does not support type checking.
-
-**Note**: If you do not need a TypeScript, you can easily abandon it. To do this, You do not need to make any bundler configuration changes, etc. Just replace all `.ts` files with `.js` files. Additionally, it will be useful to delete TS-specific files, plug-ins and dependencies like `tsconfig.json`, `@typescript-eslint/*`, etc.
-
 ### Web frameworks
 
 By default this template is configured with vanilla-ts.
