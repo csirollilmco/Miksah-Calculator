@@ -10,6 +10,7 @@ image: node:latest
 
 before_script:
   - apt update && apt install -y libwebkit2gtk-4.0-dev build-essential curl wget libssl-dev libgtk-3-dev libappindicator3-dev patchelf librsvg2-dev libappindicator-dev patchelf librsvg2-dev
+  - npm update -g npm
   - npm install -g yarn
   - curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
   - rustc --version
