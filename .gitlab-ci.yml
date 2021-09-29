@@ -1,14 +1,6 @@
 before_script:
   - export VERSION="0.0.1"
 
-cache:
-  paths:
-    - .apt
-    - node_modules/
-    - packages/src-renderer/node_modules/
-    - packages/src-tauri/target
-    - /usr/local/cargo/registry
-
 build:
   image: node:latest
   stage: build
@@ -29,6 +21,13 @@ build:
     - yarn tauri info
     - ls /var/cache/apt/ -la
     - yarn build
+  cache:
+    paths:
+      - .apt
+      - node_modules/
+      - packages/src-renderer/node_modules/
+      - packages/src-tauri/target
+      - /usr/local/cargo/registry
   artifacts:
     public: true
     paths:
@@ -46,6 +45,7 @@ pages:
     - mkdir -p public
     - cp -r packages/src-renderer/dist/* public
     - sed -i -E "s/(=\"\/assets)/=\".\/assets/" public/index.html
+    - sed -i -E "s/(=\"\/assets)/=\".\/assets/" public/assets/*.js
   artifacts:
     paths:
       - public
