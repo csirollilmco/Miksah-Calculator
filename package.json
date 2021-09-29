@@ -10,8 +10,8 @@
     "packages/src-renderer"
   ],
   "scripts": {
-    "dev": "cd packages && tauri dev",
-    "build": "cd packages && tauri build",
+    "dev": "cd packages && tauri dev --verbose",
+    "build": "cd packages && tauri build --verbose",
     "dev:renderer": "cd packages/src-renderer && yarn dev",
     "build:renderer": "cd packages/src-renderer && yarn build",
     "lint": "cd packages/src-renderer && yarn lint",
