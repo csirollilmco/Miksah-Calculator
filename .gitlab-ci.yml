@@ -21,7 +21,7 @@ cache:
 
 before_script:
   - rm -f /etc/apt/apt.conf.d/docker-clean
-  - mkdir .apt && mkdir /var/cache/apt/archives && mount --bind .apt /var/cache/apt/archives/
+  - mkdir -p .apt && mkdir -p /var/cache/apt/archives && mount --bind .apt /var/cache/apt/archives/
   - export DEBIAN_FRONTEND="noninteractive"
   - export VERSION="0.0.1"
   #  -o dir::cache::archives="apt-cache"
@@ -54,3 +54,13 @@ build:
     public: true
     paths:
       - "*"
+      # - packages/src-tauri/target/release/bundle/deb/*
+      # - packages/src-tauri/target/release/bundle/appimage/*
+
+pages:
+  script:
+    - mkdir -p public
+    - cp packages/src-renderer/dist public
+  artifacts:
+    paths:
+      - public

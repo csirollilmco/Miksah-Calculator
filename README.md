@@ -12,7 +12,7 @@ This is a template for building desktop applications with Tauri.
 
 Create a new project using this template
 
-Click the **[Use this template][generate]** button.
+Click the **[Use this template][fork]** button.
 
 ## Features
 
@@ -72,11 +72,10 @@ Copyright (c) 2021 Valmisson Grizorte.
 [tauri-docs]: https://tauri.studio/en/docs/getting-started/intro/#setting-up-your-environment
 [vite]: https://github.com/vitejs/vite
 [vite-templates]: https://github.com/vitejs/vite/tree/main/packages/create-app
-[typescript]: https://github.com/microsoft/TypeScript
 [nodejs]: https://nodejs.org/
 [yarn]: https://yarnpkg.com/
 [npm]: https://www.npmjs.com/
-[license]: https://github.com/valmisson/tauri-app-template/blob/main/LICENSE
-[src-tauri]: https://github.com/valmisson/tauri-app-template/tree/main/packages/src-tauri
-[src-renderer]: https://github.com/valmisson/tauri-app-template/tree/main/packages/src-renderer
-[generate]: https://github.com/valmisson/tauri-app-template/generate
+[license]: https://gitlab.com/or-software/source-code/tauri-app-template/-/blob/main/LICENSE
+[src-tauri]: https://gitlab.com/or-software/source-code/tauri-app-template/-/tree/main/packages/src-tauri
+[src-renderer]: https://gitlab.com/or-software/source-code/tauri-app-template/-/tree/main/packages/src-renderer
+[fork]: https://gitlab.com/or-software/source-code/tauri-app-template/-/forks/new
