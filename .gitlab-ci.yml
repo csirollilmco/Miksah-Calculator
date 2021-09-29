@@ -58,6 +58,7 @@ build:
       # - packages/src-tauri/target/release/bundle/appimage/*
 
 pages:
+  stage: deploy
   script:
     - mkdir -p public
     - cp packages/src-renderer/dist public
