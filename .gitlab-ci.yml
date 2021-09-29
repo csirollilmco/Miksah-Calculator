@@ -45,6 +45,7 @@ pages:
   script:
     - mkdir -p public
     - cp -r packages/src-renderer/dist/* public
+    - sed -i -E "s/(=\"\/assets)/=\".\/assets/" public/index.html
   artifacts:
     paths:
       - public
