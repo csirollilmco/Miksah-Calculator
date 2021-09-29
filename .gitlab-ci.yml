@@ -15,7 +15,7 @@ before_script:
   - source $HOME/.cargo/env
   - rustc --version
   - yarn install
-  - yarn audit fix
+  # - yarn audit
   - yarn tauri info
 # Pick zero or more services to be used on all builds.
 # Only needed when using a docker container to run your tests in.
